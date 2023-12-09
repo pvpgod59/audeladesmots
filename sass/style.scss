@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Contrail+One&display=swap');
+
+$light-pink: #FFEBD6;
+$green: #2C7873;
+
+$navbar-height: 75px;
+
+*{
+    color: $green;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body{
+    height: 10000px;
+    z-index: 1;
+}
+
+// HEADER
+
+// -Logo
+
+header section#logo{
+    background-color: $light-pink;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img{
+        height: 100%;
+    }
+}
+
+// -Navbar
+
+header nav {
+    position: relative;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    height: $navbar-height;
+    background-color: $light-pink;
+
+    &.sticky{
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    img.logo {
+        border-radius: 100%;
+        height: 70px;
+        width: 70px;
+    }
+
+    .nav-links ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        
+        li {
+            margin: 0 30px;
+
+            a {
+                text-decoration: none;
+                font-family: 'Contrail One', sans-serif;
+                cursor: pointer;
+    
+                &:hover{
+                    text-decoration: underline;
+                    
+                }
+
+                &.active{
+                    font-weight: bold;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .menu-hamburger {
+        display: none;
+        position: fixed;
+        left: $navbar-height / 3;
+        width: 35px;
+    }
+}
+
+.scroll-block {
+	overflow-y: hidden;
+}
+
+// MEDIA QUERIES
+
+@media screen and (max-width: 800px) {
+
+    // Logo
+
+    header section#logo{
+        display: none;
+    }
+
+    // Navbar
+
+	header nav {
+        position: fixed;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .menu-hamburger {
+            display: block;
+        }
+
+        img.logo {
+            margin-left: 30px;
+            width: 70px;
+            height: 70px;
+        }
+
+        .nav-links {
+            background-color: rgba($light-pink, 0.75);
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: -100%;
+            transition: all 0.5s ease;
+
+            ul {
+                height: 75%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                li {
+                    height: fit-content;
+                    font-size: 1.2em;
+                }
+            }
+        }
+
+        .nav-links.mobile-menu {
+            margin-left: 0;
+        }
+    }
+
+    // Margin Div
+
+    div#margin{
+        height: $navbar-height;
+    }
+}
