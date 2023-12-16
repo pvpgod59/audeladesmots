@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Document</title>
+        <title>Au Dela Des Mots | EI</title>
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css">
         <link rel="stylesheet" href="style.css">
@@ -30,12 +30,12 @@
     
                     <ul>
     
-                        <li><a id="link-1" class="link" onclick="setActiveLink(1)">Accueil</a></li>
-                        <li><a id="link-2" class="link" onclick="setActiveLink(2)">Soins et présentations</a></li>
-                        <li><a id="link-3" class="link" onclick="setActiveLink(3)">Entreprises</a></li>
-                        <li><a id="link-4" class="link" onclick="setActiveLink(4)">Tarifs</a></li>
-                        <li><a id="link-5" class="link" onclick="setActiveLink(5)">Contact</a></li>
-                        <li><a id="link-6" class="link" onclick="setActiveLink(6)">Actu</a></li>
+                        <li><a id="link-1" class="link" onclick="setActiveLink(1), disableBurger()">Accueil</a></li>
+                        <li><a id="link-2" class="link" onclick="setActiveLink(2), disableBurger()">Soins et présentations</a></li>
+                        <li><a id="link-3" class="link" onclick="setActiveLink(3), disableBurger()">Entreprises</a></li>
+                        <li><a id="link-4" class="link" onclick="setActiveLink(4), disableBurger()">Tarifs</a></li>
+                        <li><a id="link-5" class="link" onclick="setActiveLink(5), disableBurger()">Contact</a></li>
+                        <li><a id="link-6" class="link" onclick="setActiveLink(6), disableBurger()">Actu</a></li>
     
                     </ul>
     
@@ -45,11 +45,21 @@
     
             </nav>
 
+            <div id="margin"></div>
+
+            <section id="slider">
+
+                <div id="slide-container">
+
+                    <img id="slide-1" class="slide">
+                    
+                    <img id="slide-2" class="slide">
+                
+                </div>
+
+            </section>
+
         </header>
-
-        <div id="margin"></div>
-
-        <p>cc</p> <p>cc</p> <p>cc</p> <p>cc</p> <p>cc</p> <p>cc</p> <p>cc</p> <p>cc</p>
 
         <script src="app.js"></script>
 

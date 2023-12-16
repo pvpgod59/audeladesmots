@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Contrail+One&display=swap");
 * {
   color: #2C7873;
@@ -50,9 +51,6 @@ header nav .nav-links ul {
   justify-content: space-around;
   position: absolute;
 }
-header nav .nav-links ul li {
-  margin: 0 30px;
-}
 header nav .nav-links ul li a {
   text-decoration: none;
   font-family: "Contrail One", sans-serif;
@@ -70,6 +68,26 @@ header nav .menu-hamburger {
   position: fixed;
   left: 25px;
   width: 35px;
+}
+
+header div#margin.active {
+  height: 75px;
+}
+
+header section#slider {
+  background-color: red;
+  width: 100%;
+  height: 200px;
+}
+header section#slider div#slide-container {
+  display: flex;
+  height: 100%; /* Hauteur fixe */
+  white-space: nowrap; /* Empêche le saut à la ligne des éléments en ligne */
+  transition: scroll-behavior 0.5s ease-in-out;
+  overflow: hidden;
+}
+header section#slider div#slide-container img {
+  flex: 0 0 100%;
 }
 
 .scroll-block {
@@ -121,7 +139,7 @@ header nav .menu-hamburger {
   header nav .nav-links.mobile-menu {
     margin-left: 0;
   }
-  div#margin {
+  header div#margin {
     height: 75px;
   }
 }

@@ -4,6 +4,7 @@ $light-pink: #FFEBD6;
 $green: #2C7873;
 
 $navbar-height: 75px;
+$slider-height: 200px;
 
 *{
     color: $green;
@@ -65,24 +66,19 @@ header nav {
         justify-content: space-around;
         position: absolute;
         
-        li {
-            margin: 0 30px;
-
-            a {
-                text-decoration: none;
-                font-family: 'Contrail One', sans-serif;
-                cursor: pointer;
+        li a{
+            text-decoration: none;
+            font-family: 'Contrail One', sans-serif;
+            cursor: pointer;
     
-                &:hover{
-                    text-decoration: underline;
-                    
-                }
-
-                &.active{
-                    font-weight: bold;
-                    text-decoration: underline;
-                }
+            &:hover{
+                text-decoration: underline;
             }
+
+            &.active{
+                font-weight: bold;
+                text-decoration: underline;
+            }    
         }
     }
 
@@ -91,6 +87,32 @@ header nav {
         position: fixed;
         left: $navbar-height / 3;
         width: 35px;
+    }
+}
+
+// -Margin Div
+
+header div#margin.active{
+    height: $navbar-height;
+}
+
+// -Slider
+
+header section#slider{
+    background-color: red;
+    width: 100%;
+    height: $slider-height;
+
+    div#slide-container{
+        display: flex;
+        height: 100%; /* Hauteur fixe */
+        white-space: nowrap; /* Empêche le saut à la ligne des éléments en ligne */
+        transition: scroll-behavior 0.5s ease-in-out;
+        overflow: hidden;
+
+        img{
+            flex: 0 0 100%;
+        }
     }
 }
 
@@ -160,7 +182,7 @@ header nav {
 
     // Margin Div
 
-    div#margin{
+    header div#margin{
         height: $navbar-height;
     }
 }
