@@ -46,6 +46,7 @@ function setActiveLink(index, redirect) {
     document.getElementById(localStorage.getItem("activeLink")).classList.add("active");
 
     setIframeSrc();
+    disableBurger();
 }
 
 // SLIDER
