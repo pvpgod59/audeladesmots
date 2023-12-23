@@ -120,6 +120,20 @@ header section#slider{
 	overflow-y: hidden;
 }
 
+// MAIN
+
+main{
+    height: max-content;
+    width: 100%;
+}
+
+// -Iframe
+
+main iframe{
+    height: max-content;
+    width: 100%;
+}
+
 // MEDIA QUERIES
 
 @media screen and (max-width: 800px) {

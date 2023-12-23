@@ -30,12 +30,12 @@
     
                     <ul>
     
-                        <li><a id="link-1" class="link" onclick="setActiveLink(1), disableBurger()">Accueil</a></li>
-                        <li><a id="link-2" class="link" onclick="setActiveLink(2), disableBurger()">Soins et présentations</a></li>
-                        <li><a id="link-3" class="link" onclick="setActiveLink(3), disableBurger()">Entreprises</a></li>
-                        <li><a id="link-4" class="link" onclick="setActiveLink(4), disableBurger()">Tarifs</a></li>
-                        <li><a id="link-5" class="link" onclick="setActiveLink(5), disableBurger()">Contact</a></li>
-                        <li><a id="link-6" class="link" onclick="setActiveLink(6), disableBurger()">Actu</a></li>
+                        <li><a id="link-1" class="link" onclick="setActiveLink(1, 'accueil')">Accueil</a></li>
+                        <li><a id="link-2" class="link" onclick="setActiveLink(2, 'soinsEtPresentations')">Soins et présentations</a></li>
+                        <li><a id="link-3" class="link" onclick="setActiveLink(3, 'entreprises')">Entreprises</a></li>
+                        <li><a id="link-4" class="link" onclick="setActiveLink(4, 'tarifs')">Tarifs</a></li>
+                        <li><a id="link-5" class="link" onclick="setActiveLink(5, 'contact')">Contact</a></li>
+                        <li><a id="link-6" class="link" onclick="setActiveLink(6, 'actu')">Actu</a></li>
     
                     </ul>
     
@@ -58,6 +58,12 @@
                 </div>
 
             </section>
+
+            <main>
+
+                <iframe id="iframe" src="pages/accueil/" onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));' style="height:200px;"></iframe>
+                
+            </main>
 
         </header>
 

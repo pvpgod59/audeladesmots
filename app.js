@@ -36,13 +36,35 @@ function disableBurger(){
 
 var links = document.getElementsByClassName("link");
 
-function setActiveLink(index) {
+function setActiveLink(index, redirect) {
     for (let i = 0; i < links.length; i++) {
-		document.getElementById("link-" + (i+1)).classList.remove("active");
+        document.getElementById("link-" + (i+1)).classList.remove("active"); 
     }
+    localStorage.setItem("pageName", redirect)
+    localStorage.setItem("activeLink", "link-" + index)
 
-	document.getElementById("link-" + index).classList.add("active");
+    document.getElementById(localStorage.getItem("activeLink")).classList.add("active");
+
+    setIframeSrc();
 }
 
 // SLIDER
 
+// IFRAME SRC CHANGER
+
+iframe = document.getElementById("iframe")
+
+function setIframeSrc() {
+    iframe.src = "pages/" + localStorage.getItem("pageName");
+}
+
+// ONLOAD
+
+window.addEventListener('load', function() {
+    if (!localStorage.getItem('pageName') || !localStorage.getItem('activeLink')) {
+        setActiveLink(1, "accueil");
+    } else{
+        document.getElementById(localStorage.getItem("activeLink")).classList.add("active");
+        setIframeSrc();
+    }
+});

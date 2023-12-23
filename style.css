@@ -94,6 +94,16 @@ header section#slider div#slide-container img {
   overflow-y: hidden;
 }
 
+main {
+  height: max-content;
+  width: 100%;
+}
+
+main iframe {
+  height: max-content;
+  width: 100%;
+}
+
 @media screen and (max-width: 800px) {
   header section#logo {
     display: none;
